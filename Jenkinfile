@@ -12,6 +12,7 @@ pipeline {
                 sh '''
                     ./jenkins/build/mvn.sh 
                     ./jenkins/build/build.sh
+	            echo $BUILD_TAG 
                 '''
             }
 
