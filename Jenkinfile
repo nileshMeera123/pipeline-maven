@@ -44,7 +44,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-		sh './jenkins/deploy/deploy.sh'
+		sh 'ansible-playbook -i /var/jenkins_home/ansible/hosts /var/jenkins_home/ansible/play.yml'
             }
         }
     }
